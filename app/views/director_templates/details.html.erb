@@ -34,8 +34,8 @@
     <th>ID</th>
     <th>Image</th>
     <th>Name</th>
-    <th>DOB</th>
-    <th>Bio</th>
+    <th>Director</th>
+    <th>Details</th>
   </tr>
 
 <% matching_movies = Movie.where({:director_id => @the_director.id})%>
@@ -46,7 +46,7 @@
         <img src="<%= a_movie.image %>" width="200">
       </td>
       <td><%= a_movie.title %></td>
-      <td><%= a_movie.director_id %></td>
+      <td><%= @the_director.name %></td>
       <td>
         <a href = "/movies/<%= a_movie.id %>">Show Details</a>
       </td>
